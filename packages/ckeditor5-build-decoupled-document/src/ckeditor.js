@@ -39,6 +39,7 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
+import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
 
 export default class DecoupledEditor extends DecoupledEditorBase {}
 
@@ -76,7 +77,8 @@ DecoupledEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	TextTransformation
+	TextTransformation,
+	RemoveFormat
 ];
 
 // Editor configuration.
@@ -110,6 +112,7 @@ DecoupledEditor.defaultConfig = {
 			'insertTable',
 			'mediaEmbed',
 			'|',
+			'removeFormat',
 			'undo',
 			'redo'
 		]
