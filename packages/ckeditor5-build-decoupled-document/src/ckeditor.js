@@ -40,6 +40,9 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
+import LinkImage from '@ckeditor/ckeditor5-link/src/linkimage';
+import Anchor from '@ckeditor/ckeditor5-anchor/src/anchor';
+
 
 export default class DecoupledEditor extends DecoupledEditorBase {}
 
@@ -78,7 +81,9 @@ DecoupledEditor.builtinPlugins = [
 	Table,
 	TableToolbar,
 	TextTransformation,
-	RemoveFormat
+	RemoveFormat,
+	LinkImage,
+	Anchor
 ];
 
 // Editor configuration.
@@ -106,6 +111,7 @@ DecoupledEditor.defaultConfig = {
 			'outdent',
 			'|',
 			'link',
+			'anchor',
 			'blockquote',
 			'ImageInsert',
 			// 'imageUpload',
@@ -128,7 +134,9 @@ DecoupledEditor.defaultConfig = {
 			'imageStyle:full',
 			'imageStyle:alignRight',
 			'|',
-			'imageTextAlternative'
+			'imageTextAlternative',
+			'|',
+			'linkImage'
 		]
 	},
 	table: {
